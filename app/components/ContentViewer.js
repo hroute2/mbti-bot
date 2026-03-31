@@ -176,8 +176,8 @@ export default function ContentViewer({ kind, itemKey, category, builtinText, he
             style={{
               backgroundColor: 'var(--bg)',
               borderColor: 'var(--border)',
-              maxHeight: '85vh',
-              height: '85vh',
+              maxHeight: '85dvh',
+              height: '85dvh',
             }}
           >
             {/* ヘッダー */}

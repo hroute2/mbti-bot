@@ -30,4 +30,37 @@ body {
   background-color: var(--bg);
   color: var(--text);
   transition: background-color 0.2s, color 0.2s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* iOS safe area */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* タッチフィードバック */
+@media (hover: none) {
+  button:active, a:active {
+    opacity: 0.8;
+  }
+}
+
+/* スクロールバーのスタイリング */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+/* モバイルでのタップハイライト無効化 */
+* {
+  -webkit-tap-highlight-color: transparent;
 }

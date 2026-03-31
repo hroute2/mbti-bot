@@ -115,10 +115,10 @@ export default function DiagnosisPage() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto space-y-6">
+    <div className="max-w-2xl mx-auto space-y-4 sm:space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">MBTI診断</h1>
-        <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+        <h1 className="text-xl sm:text-2xl font-bold">MBTI診断</h1>
+        <span className="text-xs sm:text-sm px-2 py-1 rounded-full font-medium" style={{ backgroundColor: 'var(--accent-light)', color: 'var(--accent)' }}>
           {currentQ + 1} / 16
         </span>
       </div>
@@ -134,30 +134,30 @@ export default function DiagnosisPage() {
       </div>
 
       <div
-        className="p-6 rounded-xl border space-y-4"
+        className="p-4 sm:p-6 rounded-xl border space-y-3 sm:space-y-4"
         style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)' }}
       >
         <div className="text-xs font-medium" style={{ color: 'var(--accent)' }}>
           質問 {question.id} / 16 ({question.axis})
         </div>
-        <p className="text-lg font-medium">{question.text}</p>
+        <p className="text-base sm:text-lg font-medium leading-relaxed">{question.text}</p>
 
-        <div className="space-y-3 pt-2">
+        <div className="space-y-2 sm:space-y-3 pt-1 sm:pt-2">
           <button
             onClick={() => handleAnswer('A')}
-            className="w-full text-left p-4 rounded-lg border transition-all hover:scale-[1.01] cursor-pointer"
+            className="w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all active:scale-[0.98] sm:hover:scale-[1.01] cursor-pointer"
             style={{ borderColor: 'var(--border)', backgroundColor: 'var(--bg)' }}
           >
-            <span className="font-semibold mr-2" style={{ color: 'var(--accent)' }}>A.</span>
-            {question.choiceA}
+            <span className="inline-block w-7 h-7 rounded-full text-center leading-7 text-sm font-bold mr-2 text-white" style={{ backgroundColor: 'var(--accent)' }}>A</span>
+            <span className="text-sm sm:text-base">{question.choiceA}</span>
           </button>
           <button
             onClick={() => handleAnswer('B')}
-            className="w-full text-left p-4 rounded-lg border transition-all hover:scale-[1.01] cursor-pointer"
+            className="w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all active:scale-[0.98] sm:hover:scale-[1.01] cursor-pointer"
             style={{ borderColor: 'var(--border)', backgroundColor: 'var(--bg)' }}
           >
-            <span className="font-semibold mr-2" style={{ color: 'var(--accent)' }}>B.</span>
-            {question.choiceB}
+            <span className="inline-block w-7 h-7 rounded-full text-center leading-7 text-sm font-bold mr-2 text-white" style={{ backgroundColor: 'var(--accent)' }}>B</span>
+            <span className="text-sm sm:text-base">{question.choiceB}</span>
           </button>
         </div>
       </div>
@@ -165,10 +165,10 @@ export default function DiagnosisPage() {
       {currentQ > 0 && (
         <button
           onClick={() => setAnswers(answers.slice(0, -1))}
-          className="text-sm underline cursor-pointer"
+          className="flex items-center gap-1 text-sm cursor-pointer active:opacity-70"
           style={{ color: 'var(--text-secondary)' }}
         >
-          前の質問に戻る
+          ← 前の質問に戻る
         </button>
       )}
     </div>

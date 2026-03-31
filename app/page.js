@@ -10,26 +10,28 @@ const MENU_ITEMS = [
 
 export default function Home() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold" style={{ color: 'var(--accent)' }}>MBTI Bot</h1>
-        <p style={{ color: 'var(--text-secondary)' }}>MBTIの診断と情報閲覧</p>
+        <h1 className="text-3xl sm:text-4xl font-bold" style={{ color: 'var(--accent)' }}>MBTI Bot</h1>
+        <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>MBTIの診断と情報閲覧</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {MENU_ITEMS.map(item => (
           <Link
             key={item.href}
             href={item.href}
-            className="block p-6 rounded-xl border transition-all hover:scale-[1.02]"
+            className="flex items-center gap-4 p-4 sm:p-6 sm:block rounded-xl border transition-all active:scale-[0.98] sm:hover:scale-[1.02]"
             style={{
               backgroundColor: 'var(--bg-card)',
               borderColor: 'var(--border)',
             }}
           >
-            <div className="text-3xl mb-3">{item.icon}</div>
-            <h2 className="text-lg font-semibold mb-1">{item.title}</h2>
-            <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{item.desc}</p>
+            <div className="text-2xl sm:text-3xl sm:mb-3">{item.icon}</div>
+            <div>
+              <h2 className="text-base sm:text-lg font-semibold">{item.title}</h2>
+              <p className="text-xs sm:text-sm mt-0.5" style={{ color: 'var(--text-secondary)' }}>{item.desc}</p>
+            </div>
           </Link>
         ))}
       </div>

@@ -144,10 +144,10 @@ export default function ChatPage() {
   }
 
   return (
-    <div className="flex flex-col h-[calc(100vh-8rem)] max-w-3xl mx-auto">
+    <div className="flex flex-col h-[calc(100vh-8rem)] sm:h-[calc(100vh-8rem)] h-[calc(100dvh-7rem)] max-w-3xl mx-auto">
       {/* ヘッダー */}
-      <div className="flex items-center gap-3 pb-4 border-b" style={{ borderColor: 'var(--border)' }}>
-        <h1 className="text-xl font-bold flex-1">💬 MBTIチャット</h1>
+      <div className="flex items-center gap-2 sm:gap-3 pb-3 sm:pb-4 border-b" style={{ borderColor: 'var(--border)' }}>
+        <h1 className="text-lg sm:text-xl font-bold flex-1">💬 MBTIチャット</h1>
         <select
           value={mbtiType}
           onChange={e => setMbtiType(e.target.value)}
