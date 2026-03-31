@@ -283,7 +283,8 @@ export default function ContentViewer({ kind, itemKey, category, builtinText, he
                   onChange={e => setInput(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="質問を入力..."
-                  className="flex-1 bg-transparent outline-none text-sm py-1.5"
+                  className="flex-1 bg-transparent outline-none text-base sm:text-sm py-1.5"
+                  style={{ fontSize: '16px' }}
                   style={{ color: 'var(--text)' }}
                   disabled={loading}
                 />

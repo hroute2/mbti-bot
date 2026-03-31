@@ -249,8 +249,8 @@ export default function ChatPage() {
             onKeyDown={handleKeyDown}
             placeholder="メッセージを入力..."
             rows={1}
-            className="flex-1 resize-none bg-transparent outline-none text-sm py-2 px-2"
-            style={{ color: 'var(--text)', maxHeight: '120px' }}
+            className="flex-1 resize-none bg-transparent outline-none text-base sm:text-sm py-2 px-2"
+            style={{ color: 'var(--text)', maxHeight: '120px', fontSize: '16px' }}
             disabled={streaming}
           />
           <button

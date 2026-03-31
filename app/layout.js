@@ -4,12 +4,14 @@ import Header from './components/Header';
 export const metadata = {
   title: 'MBTI Bot',
   description: 'MBTI診断・情報閲覧Webアプリ',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    viewportFit: 'cover',
-  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
 };
 
 export default function RootLayout({ children }) {
