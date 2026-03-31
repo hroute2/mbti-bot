@@ -1,0 +1,31 @@
+{
+  "name": "mbti-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev -p 3333",
+    "build": "next build",
+    "start:web": "next start",
+    "start:cli": "node --env-file=.env index.js",
+    "test": "node --test test/**/*.test.js",
+    "test:smoke": "node --test test/**/*.smoke.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "MBTI診断・情報閲覧CLIボット",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "cheerio": "^1.2.0",
+    "next": "^16.2.1",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.2.2"
+  }
+}
